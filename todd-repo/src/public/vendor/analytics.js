@@ -23,6 +23,9 @@
 
     trackConversion(function() {
       form.submit();
+
+      // this way to call the submit with current form
+      // HTMLFormElement.prototype.submit.call(form);
     });
 
   }, true);
