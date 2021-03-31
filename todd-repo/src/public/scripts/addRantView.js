@@ -23,10 +23,12 @@ var AddRantView = Backbone.View.extend({
       text: form.rant.value
     };
 
-    analytics.trackConversion();
-    this.collection.create(rant, { wait: true });
+    if (rant.text && typeof rant.text === string) {
+      analytics.trackConversion();
+      this.collection.create(rant, { wait: true });
 
-    form.rant.value = '';
+      form.rant.value = '';
+    }
   }
 
 });

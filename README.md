@@ -37,3 +37,11 @@ Question: [10, 5, 1].sort()
 Asnwer: [1, 10, 5]
 
 Description: Array.prototype.sort's default comparator assumes String operations. All values are coerced and compared as Strings.
+
+
+---
+
+
+blackBox Script
+Errors will never be seen in the console.
+chrome -> in source -> open a script file -> right click -> click on "Blackbox script"
