@@ -36,7 +36,17 @@ var AdListView = Backbone.View.extend({
   },
 
   render: function() {
+    // empty the element
     this.el.innerHTML = '';
+
+    // set children length to 0
+    this.children.length = 0;
+
+    // remove children inot dom tree node
+    // this.children.forEach((child) => {
+    //   child.remove();
+    // })
+
     this.collection.each((model) => {
       this.renderAd(model);
     });
