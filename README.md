@@ -45,3 +45,43 @@ Description: Array.prototype.sort's default comparator assumes String operations
 blackBox Script
 Errors will never be seen in the console.
 chrome -> in source -> open a script file -> right click -> click on "Blackbox script"
+
+
+---
+
+## JavaScript Quirks
+
+Question: Math.max()
+Asnwer: -Infinity
+
+Description: Called with no arguments, Math.max() returns the smallest number in JavaScript.
+
+---
+
+Question: (function foo(a, b) {}).length
+Asnwer: 2
+
+Description: Function.prototype.length return the number of arguments specified in the function definition.
+
+---
+
+Question: +"42"
+Asnwer: 42
+
+Description: The "+" operator is not preceded by a String, so it is considered arithmetic and attempts to coerce the following value a Number. The gets evaluated as "0 + 42".
+
+---
+
+Question: '😊' - '😊'
+Asnwer: NaN
+
+Description: The "-" operator is always arithmetic, so both items are coerced into Numbers. They cannot be interpreted and result in NaN.
+
+---
+
+Question: !!""
+Asnwer: False
+
+Description: The not, not syntax flips the value twice. So the first not change the empty string into it's opposite Boolean value. so the opposite value would be true and then the second not flips it back. So the value coerce it Boolean type true.
+
+---
